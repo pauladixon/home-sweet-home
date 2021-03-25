@@ -1,3 +1,4 @@
+import { SharedModule } from './shared/shared.module';
 import { HousesModule } from './houses/houses.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -13,7 +14,8 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRoutingModule, 
-    HousesModule
+    HousesModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,6 @@
+import { IHouse } from './../../shared/interfaces';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-houses-list',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HousesListComponent implements OnInit {
 
+  filteredHouses: IHouse[] = []
+  currencyCode: string = 'USD'
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(){
   }
 
 }
