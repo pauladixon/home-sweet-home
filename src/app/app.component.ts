@@ -8,14 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 
 
-  title = 'home-sweet-home'
+  title:string
 
   constructor(){
 
   }
 
   ngOnInit(){
-
+    this.title = 'home sweet home'
   }
 
 
