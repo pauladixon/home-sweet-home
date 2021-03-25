@@ -1,5 +1,5 @@
 import { IHouse } from './../../shared/interfaces';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 
 @Component({
@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './houses-list.component.html',
   styleUrls: ['./houses-list.component.sass']
 })
-export class HousesListComponent implements OnInit {
 
-  filteredHouses: IHouse[] = []
+export class HousesListComponent implements OnInit {
+  private _houses: IHouse[] = []
+  @Input() get houses(): IHouse[] {
+    return this._houses
+  }
+
+  set houses(value: IHouse[]){
+    if(value){
+      this.filteredHouses = this._houses = value
+    }
+  }
+
+
+  filteredHouses: any[] = []
   currencyCode: string = 'USD'
 
   constructor() { }
@@ -17,4 +29,7 @@ export class HousesListComponent implements OnInit {
   ngOnInit(){
   }
 
+  sort(prop: string) {
+
+  }
 }
