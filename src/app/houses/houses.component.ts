@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core'
 
 export class HousesComponent implements OnInit {
   
-  title: string
-  homes: any[]
+  title: string = ''
+  homes: any[] = []
 
   constructor() { }
 
