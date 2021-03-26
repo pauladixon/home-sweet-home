@@ -17,7 +17,7 @@ export class HousesComponent implements OnInit {
 
     this.title = 'houses'
     this.houses = [
-      { nickname: 'mansion', address: '2039 termon ave', neighborhood: 'brighton heights', bedrooms: 6, bathrooms: 3, price: 350000, availableSince: new Date(2021, 3, 3)},
+      { nickname: 'mansion', address: '2039 termon ave', neighborhood: 'brighton heights', bedrooms: 6, bathrooms: 3, price: 350000, availableSince: new Date(2021, 2, 3)},
   ];
   }
 

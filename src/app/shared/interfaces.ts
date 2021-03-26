@@ -5,7 +5,7 @@ export interface IHouse {
     bedrooms: number;
     bathrooms: number
     price: number
-    availableSince: any;
+    availableSince?: any;
 }
 
 export interface IBuyer {

@@ -16,7 +16,7 @@
             <th>available since</th>
         </tr>
     </thead>
-    <tr *NGFOR='let house of filteredHouses'>
+    <tr *ngFor='let house of filteredHouses'>
         <td>
             <a>
                 {{ house.nickname }}
@@ -26,8 +26,8 @@
         <td> {{ house.neighborhood }} </td>
         <td> {{ house.bedrooms }} </td>
         <td> {{ house.bathrooms }} </td>
-        <td> {{ house.price }} </td>
-        <td> {{ house.availableSince }} </td>
+        <td> {{ house.price | currency:currencyCode: 'symbol'}} </td>
+        <td> {{ house.availableSince }}</td>
         
     <tr *ngIf='!filteredHouses || !filteredHouses.length'>
         <td colspan="4">no houses found</td>
